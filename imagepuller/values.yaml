@@ -1,0 +1,16 @@
+src:
+  image: "docker://index.docker.io/from/this:tag"
+  pullSecret:
+    enabled: false
+    name: regcred
+    key: .dockerconfigjson
+dst:
+  image: "docker-daemon:to/that:tag"
+
+initPuller:
+  image: quay.io/rhpipeline/skopeo:alpine
+  command:
+    - skopeo
+    - copy
+  secretMountPath: "/root"
+  secretProjection: .docker/config.json

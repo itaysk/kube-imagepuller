@@ -1,0 +1,7 @@
+apiVersion: v1
+appVersion: "1.0"
+description: Pull container images to your nodes so that they are already present when containers are launched
+name: imagepuller
+version: 0.1.0
+sources:
+  - "https://github.com/itaysk/kube-imagepuller"
