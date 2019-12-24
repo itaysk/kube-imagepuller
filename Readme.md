@@ -8,7 +8,7 @@ This repo was created following this gist: https://gist.github.com/itaysk/7bc3e5
 See the [Helm chart readme](/imagepuller/Readme.md) for comperhansive information, here's an example:
 
 ```
-git pull https://github.com/itaysk/kube-imagepuller
+git clone https://github.com/itaysk/kube-imagepuller
 cd kube-imagepuller
 helm install imagepuller --set src.image=docker://index.docker.io/from/this:tag --set dst.image=docker-daemon:to/that:tag
 ```
